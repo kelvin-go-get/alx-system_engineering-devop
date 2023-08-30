@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1 --group-directories-first --format=commas | sed 's/$/\//'
+ls -A1 --group-directories-first | awk -F/ '{ printf "%s%s,", $0, (NF == 1 && $0 != "." && $0 != ".." ? "" : "/") } END { printf "\n" }''

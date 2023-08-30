@@ -1,2 +1,12 @@
 #!/bin/bash
-pwd
+
+# Get the absolute path of the current working directory
+current_dir=$(pwd)
+
+# Calculate the length of the path
+path_length=${#current_dir}
+
+# Print the formatted output
+echo "[Got]"
+echo "($path_length chars long)"
+echo "$current_dir"
